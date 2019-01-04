@@ -1,0 +1,41 @@
+<import src='post-item/post-item-template.wxml' />
+<view>
+  <!-- banner图 -->
+  <swiper catchtap='onSwiperTap' class='swiper_img' indicator-dots='true' indicator-color="#b3d4db" autoplay='true' interval='2000'>
+    <swiper-item>
+      <image src='/images/pig_banner.jpg' data-postId="1"></image>
+    </swiper-item>
+    <swiper-item>
+      <image  src='/images/banner.jpg' data-postId="3"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/banner2.jpeg' data-postId="2"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- 新闻列表 -->
+  <block wx:for="{{posts_key}}" wx:key="item">
+  <!-- template 页面加载后没有template，所有用view包裹-->
+   <!-- 这里data的传值可以是data=“{{...item}}”，这样的形式就后面可以省略item的重复书写，直接去掉item -->
+   <view catchtap='onPostTap' data-postId = "{{item.postId}}">
+   <template is="postItem" data="{{item}}" />
+   </view>
+    <!-- <view class='post-container'>
+      <view class='post-author-date'>
+        <image wx:if="{{true}}" src='{{item.avatar}}'></image>
+        <text class='post-date'>{{item.date}} +"默认的index和item"+{{index}}</text>
+      </view>
+      <text class='post-title'>{{item.title}}</text>
+      <view>
+        <image class='post-image' src='{{item.imgSrc}}'></image>
+        <text class='post-content'>{{item.content}}</text>
+      </view>
+      <view class='post-like'>
+        <image class='post-like-image' src='/images/star.png'></image>
+        <text class='post-like-font'>{{item.reading}}</text>
+        <image class='post-like-image' src='/images/comment3.png'></image>
+        <text class='post-like-font'>{{item.collection}}</text>
+      </view>
+    </view> -->
+  </block>
+</view>

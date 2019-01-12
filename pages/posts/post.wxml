@@ -3,13 +3,13 @@
   <!-- banner图 -->
   <swiper catchtap='onSwiperTap' class='swiper_img' indicator-dots='true' indicator-color="#b3d4db" autoplay='true' interval='2000'>
     <swiper-item>
-      <image src='/images/pig_banner.jpg' data-postId="1"></image>
+      <image src='/images/time.jpg' data-postId="1"></image>
     </swiper-item>
     <swiper-item>
-      <image  src='/images/banner.jpg' data-postId="3"></image>
+      <image  src='/images/loving.jpg' data-postId="2"></image>
     </swiper-item>
     <swiper-item>
-      <image src='/images/banner2.jpeg' data-postId="2"></image>
+      <image src='/images/high_banner.jpg' data-postId="3"></image>
     </swiper-item>
   </swiper>
 

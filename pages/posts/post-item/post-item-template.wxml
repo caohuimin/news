@@ -2,7 +2,7 @@
   <view class='post-container'>
     <view class='post-author-date'>
       <image wx:if="{{true}}" src='{{item.avatar}}'></image>
-      <text class='post-date'>{{item.date}} +"默认的index和item"+{{index}}</text>
+      <text class='post-date'>{{item.date}}</text>
     </view>
     <text class='post-title'>{{item.title}}</text>
     <view>
